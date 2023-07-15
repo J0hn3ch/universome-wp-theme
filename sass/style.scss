@@ -56,6 +56,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /*--------------------------------------------------------------
 # Generic
 --------------------------------------------------------------*/
+//@tailwind base;
 
 /* Normalize
 --------------------------------------------- */
@@ -80,6 +81,16 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Components
 --------------------------------------------------------------*/
 @import "components/components";
+//@tailwind components;
+
+// a {
+//     @apply .text-grey-darker .no-underline;
+    
+//     &:hover {
+//         @apply text-red-400;
+//     }
+// }
+
 
 /*--------------------------------------------------------------
 # Plugins
@@ -92,6 +103,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /*--------------------------------------------------------------
 # Utilities
 --------------------------------------------------------------*/
+//@tailwind utilities;
 
 /* Accessibility
 --------------------------------------------- */

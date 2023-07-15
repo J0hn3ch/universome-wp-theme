@@ -41,12 +41,27 @@ function universome_theme_setup()
 		*/
 	add_theme_support('title-tag');
 
+	/* ------------------------------ 
+	 *  IMAGES
+	 * ------------------------------
+	 */
+
 	/*
 		* Enable support for Post Thumbnails on posts and pages.
 		*
 		* @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+		* Resources 
+		* @link https://developer.wordpress.org/reference/functions/add_theme_support/ 
 		*/
-	add_theme_support('post-thumbnails');
+	if (function_exists('add_theme_support')) {
+		add_theme_support('post-thumbnails');
+
+		set_post_thumbnail_size(800, 450, true); // default Featured Image dimensions (cropped)
+
+		// additional image sizes
+		add_image_size('poster-thumb', 180, 300);
+		set_post_thumbnail_size(150, 250); // 50 pixels wide by 50 pixels tall, resize mode
+	}
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
