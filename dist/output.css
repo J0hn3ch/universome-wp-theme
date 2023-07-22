@@ -657,10 +657,6 @@ a:hover {
   width: 100%;
 }
 
-.max-w-\[80rem\] {
-  max-width: 80rem;
-}
-
 .resize {
   resize: both;
 }
@@ -673,16 +669,26 @@ a:hover {
   align-items: center;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
 .justify-between {
   justify-content: space-between;
 }
 
-.rounded-xl {
-  border-radius: 0.75rem;
+.space-x-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(24px * var(--tw-space-x-reverse));
+  margin-left: calc(24px * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .border-t-4 {
   border-top-width: 4px;
+}
+
+.border-none {
+  border-style: none;
 }
 
 .border-purple {
@@ -707,6 +713,10 @@ a:hover {
 
 .text-center {
   text-align: center;
+}
+
+.align-middle {
+  vertical-align: middle;
 }
 
 .shadow {

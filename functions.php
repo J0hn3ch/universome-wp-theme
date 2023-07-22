@@ -13,6 +13,22 @@ if (!defined('_S_VERSION')) {
 	define('_S_VERSION', '1.0.0');
 }
 
+function wpb_date_today($atts, $content = null)
+{
+	$date_time = '';
+	extract(shortcode_atts(array(
+		'format' => ''
+	), $atts));
+
+	if ($atts['format'] == '') {
+		$date_format = get_option('date_format');
+		$date_time .= date_i18n($date_format,  strtotime(current_time($date_format)));
+	} else {
+		$date_time .= date_i18n($atts['format'],  strtotime(current_time($atts['format'])));
+	}
+	return $date_time;
+}
+
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -101,6 +117,15 @@ function universome_theme_setup()
 
 	// Add theme support for selective refresh for widgets.
 	add_theme_support('customize-selective-refresh-widgets');
+
+	/**
+	 * Add support to show current date in header
+	 *
+	 * @link https://codex.wordpress.org/Theme_Logo
+	 */
+	if (function_exists('wpb_date_today')) {
+		add_shortcode('date-today', 'wpb_date_today');
+	}
 
 	/**
 	 * Add support for core custom logo.
