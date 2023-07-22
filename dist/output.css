@@ -587,6 +587,12 @@ a:hover {
   }
 }
 
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
 @media (min-width: 1024px) {
   .container {
     max-width: 1024px;
@@ -596,6 +602,12 @@ a:hover {
 @media (min-width: 1280px) {
   .container {
     max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
   }
 }
 
@@ -630,15 +642,19 @@ a:hover {
 }
 
 .mb-2 {
-  margin-bottom: 0.5rem;
+  margin-bottom: 12px;
 }
 
-.mt-16 {
-  margin-top: 4rem;
+.block {
+  display: block;
 }
 
 .flex {
   display: flex;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .max-w-\[80rem\] {
@@ -647,6 +663,10 @@ a:hover {
 
 .resize {
   resize: both;
+}
+
+.flex-col {
+  flex-direction: column;
 }
 
 .items-center {
@@ -676,18 +696,17 @@ a:hover {
 }
 
 .px-2 {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-
-.px-8 {
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
 .py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .shadow {
@@ -3490,4 +3509,12 @@ a:hover {
 .nightwind .dark\:border-teal-900 {
   transition-duration: 300ms;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+.site-branding__logo-container img{
+  max-width: 350px;
 }

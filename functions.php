@@ -114,6 +114,8 @@ function universome_theme_setup()
 			'width'       => 250,
 			'flex-width'  => true,
 			'flex-height' => true,
+			'header-text' => array('site-title', 'site-description'),
+			'unlink-homepage-logo' => true,
 		)
 	);
 }

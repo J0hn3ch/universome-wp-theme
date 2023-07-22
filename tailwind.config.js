@@ -18,16 +18,34 @@ module.exports = {
       'teal':'#4dc0b5'
     },
     screens: {
-      'tablet': '640px',
+      'sm': '640px',
       // => @media (min-width: 640px) { ... }
 
-      'laptop': '1024px',
+      'md': '768px',
+      // => @media (min-width: 768px) { ... }
+
+      'lg': '1024px',
       // => @media (min-width: 1024px) { ... }
 
-      'desktop': '1280px',
+      'xl': '1280px',
       // => @media (min-width: 1280px) { ... }
+
+      '2xl': '1536px',
+      // => @media (min-width: 1536px) { ... }
     },
-    extend: {},
+    spacing: {
+      '1': '8px',
+      '2': '12px',
+      '3': '16px',
+      '4': '24px',
+      '5': '32px',
+      '6': '48px',
+    },
+    extend: {
+      aspectRatio: {
+      '4/3': '4 / 3',
+      },
+    },
   },
   variants: {
     extend: {

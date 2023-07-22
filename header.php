@@ -25,13 +25,23 @@
 <body <?php body_class(); ?>>
 	<?php wp_body_open(); ?>
 	<div id="page" class="site wrapper mt-16 px-8">
-		<div class="theme-container container mx-auto max-w-[80rem] rounded-xl shadow-md bg-white">
+		<div class="theme-container container mx-auto shadow-md bg-white">
 			<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'universome-theme'); ?></a>
 
-			<header id="masthead" class="site-header mb-2 py-4 px-2 bg-gray-50 shadow flex justify-between items-center border-t-4 border-purple">
+			<header id="masthead" class="site-header block mb-2 py-4 px-2 bg-gray-50 shadow justify-between items-center border-t-4 border-purple">
+				<!-- Location, Date, Time, Last Update -->
+				<div class="site-date flex flex-col text-center">
+					<span id="site-date__date-content w-full"> Domenica, 23 luglio 2023 </span>
+					<span id="site-date__last-update"> Ultimo aggiornamento: 12:30 </span>
+				</div>
 				<div class="site-branding">
+					<a href="/" aria-label="UniVersoMe" class="site-branding__logo-container">
+						<?php
+						if (function_exists('the_custom_logo')) {
+							the_custom_logo();
+						} ?>
+					</a>
 					<?php
-					the_custom_logo();
 					if (is_front_page() && is_home()) :
 					?>
 						<h1 class="site-title mb-2"><a href="<?php echo esc_url(home_url('/'));  ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
