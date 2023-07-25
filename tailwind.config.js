@@ -1,12 +1,23 @@
 /** @type {import('tailwindcss').Config} */
+
+const colors = require('tailwindcss/colors')
+
 module.exports = {
   content: ["./template-parts/*.{php,html,js}","./*.{php,html,js}"],
   darkMode: "class",
   theme: {
+    screens: {
+      'sm': '640px',   // => @media (min-width: 640px) { ... }
+      'md': '768px',   // => @media (min-width: 768px) { ... }
+      'lg': '1024px',  // => @media (min-width: 1024px) { ... }
+      'xl': '1280px',  // => @media (min-width: 1280px) { ... }
+      '2xl': '1536px', // => @media (min-width: 1536px) { ... }
+    },
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
       'white': '#ffffff',
+      red: colors.red,
       'purple': '#3f3cbb',
       'midnight': '#121063',
       'metal': '#565584',
@@ -17,21 +28,37 @@ module.exports = {
       'grey-darker':'#596a73',
       'teal':'#4dc0b5'
     },
-    screens: {
-      'sm': '640px',
-      // => @media (min-width: 640px) { ... }
-
-      'md': '768px',
-      // => @media (min-width: 768px) { ... }
-
-      'lg': '1024px',
-      // => @media (min-width: 1024px) { ... }
-
-      'xl': '1280px',
-      // => @media (min-width: 1280px) { ... }
-
-      '2xl': '1536px',
-      // => @media (min-width: 1536px) { ... }
+    fontFamily: {
+      'sans': ['ui-sans-serif', 'system-ui', 'Helvetica', 'Arial', 'sans-serif'],
+      'serif': ['ui-serif', 'Georgia'],
+      'mono': ['ui-monospace', 'SFMono-Regular'],
+      'display': ['Oswald'],
+      'body': ['"Open Sans"'],
+    },
+    fontSize: {
+      sm: '0.8rem',
+      base: '1rem',
+      lg: '1.10rem',
+      xl: '1.25rem',
+      '2xl': ['1.563rem', {
+        lineHeight: '2rem',
+        letterSpacing: '-0.01em',
+        fontWeight: '500',
+      }],
+      '3xl': '1.953rem',
+      '4xl': '2.441rem',
+      '5xl': '3.052rem',
+    },
+    fontWeight: {
+      hairline: '100',
+      extralight: '200',
+      light: '300',
+      normal: '400',
+      medium: '500',
+      semibold: '600',
+      bold: '700',
+      'extra-bold': '800',
+      black: '900',
     },
     spacing: {
       '1': '8px',

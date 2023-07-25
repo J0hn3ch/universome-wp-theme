@@ -29,19 +29,19 @@
 		<div class="theme-container container mx-auto shadow-md bg-white">
 			<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'universome-theme'); ?></a>
 			<!-- Header -->
-			<header id="masthead" class="site-header block mb-2 py-4 px-2 bg-gray-50 shadow justify-between items-center border-t-4 border-purple">
+			<header id="masthead" class="site-header block mt-3 mb-2 py-4 bg-gray-50 shadow justify-between items-center border-t-4 border-purple">
 				<!-- Location, Date, Time, Last Update -->
-				<div class="site-date flex flex-col text-center">
-					<span id="site-date__date-content w-full">
+				<div class="site-date flex flex-col font-sans text-center">
+					<span id="site-date__date-content" class="bg-inherit w-full">
 						<?php
 						echo do_shortcode('[date-today format="l, d F Y"]');
 						?>
 					</span>
-					<span id="site-date__last-update"> Ultimo aggiornamento: 12:30 </span>
+					<span id="site-date__last-update" class="bg-red-700 w-full text-white font-medium"> Ultimo aggiornamento: 12:30 </span>
 				</div>
 				<!-- Navigation -->
 				<div class="site-navigation flex items-center">
-					<div id="menu-dropdown" class="site-navigation__buttons-left">
+					<div id="menu-dropdown" class="site-navigation__buttons-left lg:invisible">
 						<button aria-label="Menu" class="site-navigation__button border-none">
 							<div class="site-navigation__button-icon">
 								<svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -76,16 +76,26 @@
 														?></p>
 						<?php endif; ?>
 					</div><!-- .site-branding -->
-					<nav id="site-navigation" class="main-navigation justify-center space-x-4">
+					<nav class="main-navigation pl-6 pr-6 font-sans text-xl font-semibold">
 						<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('Primary Menu', 'universome-theme'); ?></button>
 						<?php
 						wp_nav_menu(
 							array(
 								'theme_location' => 'menu-1',
 								'menu_id'        => 'primary-menu',
+								'menu_class'	 => 'flex justify-start space-x-4'
 							)
 						);
 						?>
 					</nav><!-- #site-navigation -->
+				</div> <!-- #navigation -->
+				<div id="header-image-container" class="bg-red-100 w-full h-[250px]">
+					<?php if (get_header_image()) : ?>
+						<div id="header-image-wrapper">
+							<a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
+								<img src="<?php header_image(); ?>" width="<?php echo absint(get_custom_header()->width); ?>" height="<?php echo absint(get_custom_header()->height); ?>" alt="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>">
+							</a>
+						</div>
+					<?php endif; ?>
 				</div>
 			</header><!-- #masthead -->

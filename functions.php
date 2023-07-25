@@ -83,6 +83,10 @@ function universome_theme_setup()
 	register_nav_menus(
 		array(
 			'menu-1' => esc_html__('Primary', 'universome-theme'),
+			'menu-side' => esc_html('Side menu', 'universome-theme,'),
+			'menu-footer-1' => esc_html('First Footer Menu', 'universome-theme,'),
+			'menu-footer-2' => esc_html('Second Footer Menu', 'universome-theme,'),
+			'menu-legal' => esc_html('Legal Menu', 'universome-theme,')
 		)
 	);
 
