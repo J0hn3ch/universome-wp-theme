@@ -104,8 +104,17 @@ function universome_theme_setup()
 			'menu-legal' => esc_html('Legal Menu', 'universome-theme,')
 		)
 	);
+	/* ------------------------------ 
+	 *  RESPONSIVE EMBEDS - BLOCK THEMES
+	 * ------------------------------
+	 */
+	add_theme_support('responsive-embeds');
 
-
+	/* ------------------------------ 
+	 * EDITOR STYLES - BLOCK THEMES
+	 * ------------------------------
+	 */
+	add_theme_support('editor-styles');
 
 	/*
 		* Switch default core markup for search form, comment form, and comments

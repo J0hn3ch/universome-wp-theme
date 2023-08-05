@@ -25,26 +25,8 @@
     }
     */
 
-    /* ---- Heading ----*/
-    h1 {
-        @apply text-2xl;
-    }
-    h2 {
-        @apply text-xl;
-    }
-    h3 {
-        @apply text-lg;
-    }
+    /* ---- Header ----*/
 
-    /* ---- Hyperlink ----*/
-    a {
-        @apply text-grey-darker no-underline;
-    }
-
-    a:hover {
-        @apply text-tahiti;
-    }
-    
     /* ---- Main ----*/
     main {
         @apply px-1;
@@ -61,6 +43,40 @@
 
     footer a:visited {
         @apply text-white;
+    }
+
+    /* ---- Heading ----*/
+    h1 {
+        @apply text-2xl;
+    }
+    h2 {
+        @apply text-xl;
+    }
+    h3 {
+        @apply text-lg;
+    }
+
+    /* ---- Hyperlink ----*/
+    a {
+        @apply text-blue-600 no-underline;
+    }
+    
+    a:visited {
+        @apply text-blue-800;
+    }
+
+    a:hover {
+        @apply text-tahiti;
+    }
+    
+    /* ---- Buttons ----*/
+    button {
+        @apply bg-blue-500;
+        @apply py-4;
+        @apply px-6;
+        @apply rounded;
+        @apply text-white;
+        @apply text-xl;
     }
 }
 /*--------------------------------------------------------------

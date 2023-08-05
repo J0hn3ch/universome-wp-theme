@@ -49,7 +49,7 @@
 			<div class="basis-1/2">03</div>
 		</div>
 		<div class="site-bottom-menu flex">
-			<div class="flex-none w-14 h-14">&copy; UniVersoMe <?php echo date("Y"); ?> Licenze: SIAE n. 6195/I/8746, SCF n. XXX/17, LEA n. RL_2020_81</div>
+			<div class="flex-none w-14 h-14">&copy; UniVersoMe 2015-<?php echo date("Y"); ?> Licenze: SIAE n. 6195/I/8746, SCF n. XXX/17, LEA n. RL_2020_81</div>
 			<div class="grow h-14">2</div>
 			<div class="flex-none w-14 h-14">
 				<?php

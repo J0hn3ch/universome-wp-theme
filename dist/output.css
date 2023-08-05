@@ -444,35 +444,7 @@ video {
     }
     */
 
-/* ---- Heading ----*/
-
-h1 {
-  font-size: 1.563rem;
-  line-height: 2rem;
-  letter-spacing: -0.01em;
-  font-weight: 500;
-}
-
-h2 {
-  font-size: 1.25rem;
-}
-
-h3 {
-  font-size: 1.10rem;
-}
-
-/* ---- Hyperlink ----*/
-
-a {
-  --tw-text-opacity: 1;
-  color: rgb(89 106 115 / var(--tw-text-opacity));
-  text-decoration-line: none;
-}
-
-a:hover {
-  --tw-text-opacity: 1;
-  color: rgb(58 183 191 / var(--tw-text-opacity));
-}
+/* ---- Header ----*/
 
 /* ---- Main ----*/
 
@@ -547,6 +519,133 @@ footer a:visited {
 .nightwind footer a:visited {
   transition-duration: 300ms;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+/* ---- Heading ----*/
+
+h1 {
+  font-size: 1.563rem;
+  line-height: 2rem;
+  letter-spacing: -0.01em;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 1.25rem;
+}
+
+h3 {
+  font-size: 1.10rem;
+}
+
+/* ---- Hyperlink ----*/
+
+.dark a {
+  color: rgba(147, 197, 253, var(--tw-text-opacity));
+}
+
+.dark a.nightwind-prevent {
+  color: rgba(37, 99, 235, var(--tw-text-opacity));
+}
+
+.dark .nightwind-prevent-block a {
+  color: rgba(37, 99, 235, var(--tw-text-opacity));
+}
+
+a {
+  --tw-text-opacity: 1;
+  color: rgb(37 99 235 / var(--tw-text-opacity));
+  text-decoration-line: none;
+}
+
+.nightwind a {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.dark a:visited {
+  color: rgba(219, 234, 254, var(--tw-text-opacity));
+}
+
+.dark a:visited.nightwind-prevent {
+  color: rgba(30, 64, 175, var(--tw-text-opacity));
+}
+
+.dark .nightwind-prevent-block a:visited {
+  color: rgba(30, 64, 175, var(--tw-text-opacity));
+}
+
+a:visited {
+  --tw-text-opacity: 1;
+  color: rgb(30 64 175 / var(--tw-text-opacity));
+}
+
+.nightwind a:visited {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+a:hover {
+  --tw-text-opacity: 1;
+  color: rgb(58 183 191 / var(--tw-text-opacity));
+}
+
+/* ---- Buttons ----*/
+
+.dark button {
+  background-color: rgba(96, 165, 250, var(--tw-bg-opacity));
+}
+
+.dark button.nightwind-prevent {
+  background-color: rgba(59, 130, 246, var(--tw-bg-opacity));
+}
+
+.dark .nightwind-prevent-block button {
+  background-color: rgba(59, 130, 246, var(--tw-bg-opacity));
+}
+
+button {
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+}
+
+.nightwind button {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+button {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  padding-left: 48px;
+  padding-right: 48px;
+  border-radius: 0.25rem;
+}
+
+.dark button {
+  color: rgba(0, 0, 0, var(--tw-text-opacity));
+}
+
+.dark button.nightwind-prevent {
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+
+.dark .nightwind-prevent-block button {
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+
+button {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.nightwind button {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+button {
+  font-size: 1.25rem;
 }
 
 *, ::before, ::after {
