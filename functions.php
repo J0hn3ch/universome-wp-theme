@@ -38,7 +38,9 @@ function wpb_date_today($atts, $content = null)
  */
 function universome_theme_setup()
 {
-	/*
+	/*	* ------------------------------ 
+		*  LANGUAGES
+	 	* ------------------------------
 		* Make theme available for translation.
 		* Translations can be filed in the /languages/ directory.
 		* If you're building a theme based on UniVersoMe Theme, use a find and replace
@@ -56,6 +58,19 @@ function universome_theme_setup()
 		* provide it for us.
 		*/
 	add_theme_support('title-tag');
+
+	/* ------------------------------ 
+	 *  POST FORMATS
+	 * ------------------------------
+	 * @link https://developer.wordpress.org/themes/functionality/post-formats/ 
+	 * 1. Aside: 
+	 * 2. Gallery:
+	 * 3. Quote:
+	 * 4. Image:
+	 * 5. Audio: An audio file. Could be used for Podcasting.
+	 * 6. Video: 
+	 */
+	add_theme_support('post-formats',  array('aside', 'gallery', 'quote', 'image', 'audio', 'video'));
 
 	/* ------------------------------ 
 	 *  IMAGES
@@ -82,13 +97,15 @@ function universome_theme_setup()
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
-			'menu-1' => esc_html__('Primary', 'universome-theme'),
+			'menu-1' => esc_html__('Primary Menu', 'universome-theme'),
 			'menu-side' => esc_html('Side menu', 'universome-theme,'),
 			'menu-footer-1' => esc_html('First Footer Menu', 'universome-theme,'),
 			'menu-footer-2' => esc_html('Second Footer Menu', 'universome-theme,'),
 			'menu-legal' => esc_html('Legal Menu', 'universome-theme,')
 		)
 	);
+
+
 
 	/*
 		* Switch default core markup for search form, comment form, and comments
@@ -149,6 +166,26 @@ function universome_theme_setup()
 	);
 }
 add_action('after_setup_theme', 'universome_theme_setup');
+
+/* ------------------------------ 
+ *  POST TYPES SUPPORT
+ * ------------------------------
+ */
+/*
+function universome_custom_post_formats_setup()
+{
+	$args = array(
+		'supports' => array('title', 'editor', 'author', 'post-formats'),
+	);
+	register_post_type('podcast', $args);
+
+	// add post-formats to post_type 'page'
+	add_post_type_support('page', 'post-formats');
+	// add post-formats to post_type 'my_custom_post_type'
+	add_post_type_support('podcast', 'post-formats');
+}
+add_action('init', 'universome_custom_post_formats_setup');
+*/
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.

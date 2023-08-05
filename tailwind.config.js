@@ -3,6 +3,7 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
+  //presets: [ require('@universome/tailwind-base') ],
   content: ["./template-parts/*.{php,html,js}","./*.{php,html,js}"],
   darkMode: "class",
   theme: {
@@ -18,6 +19,7 @@ module.exports = {
       current: 'currentColor',
       'white': '#ffffff',
       red: colors.red,
+      blue: colors.blue,
       'purple': '#3f3cbb',
       'midnight': '#121063',
       'metal': '#565584',
@@ -84,6 +86,7 @@ module.exports = {
   },
   plugins: [
     require("nightwind"),
+    require('@tailwindcss/typography'),
   ],
 }
 

@@ -438,9 +438,11 @@ video {
   --color-primary: 255, 115, 179;
 }
 
-html, body {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-}
+/*
+    html, body {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    */
 
 /* ---- Heading ----*/
 
@@ -470,6 +472,81 @@ a {
 a:hover {
   --tw-text-opacity: 1;
   color: rgb(58 183 191 / var(--tw-text-opacity));
+}
+
+/* ---- Main ----*/
+
+main {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+/* ---- Footer ----*/
+
+.dark footer {
+  color: rgba(0, 0, 0, var(--tw-text-opacity));
+}
+
+.dark footer.nightwind-prevent {
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+
+.dark .nightwind-prevent-block footer {
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+
+footer {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.nightwind footer {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.dark footer a {
+  color: rgba(0, 0, 0, var(--tw-text-opacity));
+}
+
+.dark footer a.nightwind-prevent {
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+
+.dark .nightwind-prevent-block footer a {
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+
+footer a {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.nightwind footer a {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.dark footer a:visited {
+  color: rgba(0, 0, 0, var(--tw-text-opacity));
+}
+
+.dark footer a:visited.nightwind-prevent {
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+
+.dark .nightwind-prevent-block footer a:visited {
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+
+footer a:visited {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.nightwind footer a:visited {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
 }
 
 *, ::before, ::after {
@@ -697,20 +774,40 @@ a:hover {
   display: flex;
 }
 
-.h-\[300px\] {
-  height: 300px;
-}
-
 .h-\[250px\] {
   height: 250px;
+}
+
+.h-\[500px\] {
+  height: 500px;
 }
 
 .w-full {
   width: 100%;
 }
 
+.flex-none {
+  flex: none;
+}
+
+.grow {
+  flex-grow: 1;
+}
+
+.basis-1\/2 {
+  flex-basis: 50%;
+}
+
+.basis-1\/4 {
+  flex-basis: 25%;
+}
+
 .resize {
   resize: both;
+}
+
+.flex-row {
+  flex-direction: row;
 }
 
 .flex-col {
@@ -723,6 +820,10 @@ a:hover {
 
 .justify-start {
   justify-content: flex-start;
+}
+
+.justify-end {
+  justify-content: flex-end;
 }
 
 .justify-between {
@@ -748,6 +849,16 @@ a:hover {
   border-color: rgb(63 60 187 / var(--tw-border-opacity));
 }
 
+.bg-blue-950 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(23 37 84 / var(--tw-bg-opacity));
+}
+
+.bg-red-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 226 226 / var(--tw-bg-opacity));
+}
+
 .bg-red-700 {
   --tw-bg-opacity: 1;
   background-color: rgb(185 28 28 / var(--tw-bg-opacity));
@@ -756,16 +867,6 @@ a:hover {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-red-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 226 226 / var(--tw-bg-opacity));
-}
-
-.px-2 {
-  padding-left: 12px;
-  padding-right: 12px;
 }
 
 .py-4 {
@@ -793,12 +894,12 @@ a:hover {
   font-size: 1.25rem;
 }
 
-.font-semibold {
-  font-weight: 600;
-}
-
 .font-medium {
   font-weight: 500;
+}
+
+.font-semibold {
+  font-weight: 600;
 }
 
 .text-white {
@@ -1204,6 +1305,306 @@ a:hover {
 }
 
 .nightwind .dark\:border-red-900 {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.nightwind .text-blue-50 {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.nightwind .dark\:text-blue-50 {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.nightwind .text-blue-100 {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.nightwind .dark\:text-blue-100 {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.nightwind .text-blue-200 {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.nightwind .dark\:text-blue-200 {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.nightwind .text-blue-300 {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.nightwind .dark\:text-blue-300 {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.nightwind .text-blue-400 {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.nightwind .dark\:text-blue-400 {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.nightwind .text-blue-500 {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.nightwind .dark\:text-blue-500 {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.nightwind .text-blue-600 {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.nightwind .dark\:text-blue-600 {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.nightwind .text-blue-700 {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.nightwind .dark\:text-blue-700 {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.nightwind .text-blue-800 {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.nightwind .dark\:text-blue-800 {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.nightwind .text-blue-900 {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.nightwind .dark\:text-blue-900 {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.nightwind .bg-blue-50 {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.nightwind .dark\:bg-blue-50 {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.nightwind .bg-blue-100 {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.nightwind .dark\:bg-blue-100 {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.nightwind .bg-blue-200 {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.nightwind .dark\:bg-blue-200 {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.nightwind .bg-blue-300 {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.nightwind .dark\:bg-blue-300 {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.nightwind .bg-blue-400 {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.nightwind .dark\:bg-blue-400 {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.nightwind .bg-blue-500 {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.nightwind .dark\:bg-blue-500 {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.nightwind .bg-blue-600 {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.nightwind .dark\:bg-blue-600 {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.nightwind .bg-blue-700 {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.nightwind .dark\:bg-blue-700 {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.nightwind .bg-blue-800 {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.nightwind .dark\:bg-blue-800 {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.nightwind .bg-blue-900 {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.nightwind .dark\:bg-blue-900 {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.nightwind .border-blue-50 {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.nightwind .dark\:border-blue-50 {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.nightwind .border-blue-100 {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.nightwind .dark\:border-blue-100 {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.nightwind .border-blue-200 {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.nightwind .dark\:border-blue-200 {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.nightwind .border-blue-300 {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.nightwind .dark\:border-blue-300 {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.nightwind .border-blue-400 {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.nightwind .dark\:border-blue-400 {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.nightwind .border-blue-500 {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.nightwind .dark\:border-blue-500 {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.nightwind .border-blue-600 {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.nightwind .dark\:border-blue-600 {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.nightwind .border-blue-700 {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.nightwind .dark\:border-blue-700 {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.nightwind .border-blue-800 {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.nightwind .dark\:border-blue-800 {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.nightwind .border-blue-900 {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
+.nightwind .dark\:border-blue-900 {
   transition-duration: 300ms;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
 }
@@ -3918,6 +4319,10 @@ a:hover {
 
 /*--------------------------------------------------------------
 # Navigation
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Footer
 --------------------------------------------------------------*/
 
 @media (min-width: 1024px) {
