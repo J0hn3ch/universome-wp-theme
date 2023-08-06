@@ -1,0 +1,19 @@
+<div>
+    <article>
+        <section>
+            <figure>
+                <image>
+                </image>
+            </figure>
+        </section>
+        <section>
+            <header>Title</header>
+            <div>Date</div>
+            <div>Category</div>
+            <footer>Author</footer>
+        </section>
+        <section>
+            <div>Excerpt</div>
+        </section>
+    </article>
+</div>

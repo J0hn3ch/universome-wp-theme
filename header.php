@@ -24,10 +24,12 @@
 
 <body <?php body_class(); ?>>
 	<?php wp_body_open(); ?>
+
 	<!-- Page -->
 	<div id="page" class="site wrapper mt-16 px-8">
 		<div class="theme-container container mx-auto shadow-md bg-white">
 			<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'universome-theme'); ?></a>
+
 			<!-- Header -->
 			<header id="masthead" class="site-header block mt-3 mb-2 py-4 bg-gray-50 shadow justify-between items-center border-t-4 border-purple">
 				<!-- Location, Date, Time, Last Update -->
@@ -41,6 +43,12 @@
 				</div>
 				<!-- Navigation -->
 				<div class="site-navigation flex items-center">
+
+					<!-- Side Menu -->
+					<!--<aside id="side-menu" class="widget-area bg-red-800 h-screen"> -->
+					<?php //dynamic_sidebar('sidebar-2'); 
+					?>
+					<!-- </aside> --> <!-- #side-menu -->
 					<div id="menu-dropdown" class="site-navigation__buttons-left lg:invisible">
 						<button aria-label="Menu" class="site-navigation__button border-none">
 							<div class="site-navigation__button-icon">
@@ -53,11 +61,11 @@
 						</button>
 					</div>
 					<div class="site-branding">
-						<a href="/" aria-label="UniVersoMe" class="site-branding__logo-container">
-							<?php
-							if (function_exists('the_custom_logo')) {
-								the_custom_logo();
-							} ?>
+						<!-- <a href="/" aria-label="UniVersoMe" class="site-branding__logo-container"> -->
+						<?php
+						if (function_exists('the_custom_logo')) {
+							the_custom_logo();
+						} ?>
 						</a>
 						<?php
 						if (is_front_page() && is_home()) :
@@ -90,7 +98,11 @@
 					</nav><!-- #site-navigation -->
 				</div> <!-- #navigation -->
 				<?php if (!is_single()) : ?>
-					<div id="header-image-container" class="bg-red-100 w-full h-[250px]">
+					<div id="header-image-container" class="bg-blue-50 w-full h-[250px] flex items-center">
+						<?php get_template_part('template-parts/components/boxes/box', 'author') ?>
+						<!-- <span class="box-decoration-clone hover:box-decoration-slice bg-gradient-to-r from-indigo-600 to-pink-500 text-white px-2 text-xl font-semibold">
+							Radio<br />UniVersoMe
+						</span> -->
 						<?php if (get_header_image()) : ?>
 							<div id="header-image-wrapper">
 								<a href="<?php echo esc_url(home_url('/')); ?>" rel="home">

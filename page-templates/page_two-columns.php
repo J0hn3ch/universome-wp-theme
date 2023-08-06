@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template Name: Three Columns
+ * Template Name: Two Columns
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -12,7 +12,7 @@ get_header();
 ?>
 
 <main id="primary-3" class="site-main">
-	<div class="columns-3">
+	<div class="columns-2">
 		<?php
 		while (have_posts()) :
 			the_post();

@@ -24,6 +24,9 @@
         font-family: Georgia, 'Times New Roman', Times, serif;
     }
     */
+    body {
+        @apply bg-red-50;
+    }
 
     /* ---- Header ----*/
 
@@ -71,14 +74,35 @@
     
     /* ---- Buttons ----*/
     button {
-        @apply bg-blue-500;
-        @apply py-4;
-        @apply px-6;
-        @apply rounded;
-        @apply text-white;
-        @apply text-xl;
+        
+    }
+
+    button:hover {
+        
+    }
+
+    /*--------------------------------------------------------------
+    # Screen size: sm
+    --------------------------------------------------------------*/
+    @media screen and (max-width:640px) {
+        
+        /*html {
+            margin-top: 0px !important;
+        }*/
+
+        body {
+            @apply bg-blue-50;
+        }
+
+        #page {
+            @apply m-0;
+            @apply p-0;
+        }
+
+        
     }
 }
+
 /*--------------------------------------------------------------
 # Custom Components
 --------------------------------------------------------------*/

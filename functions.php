@@ -85,13 +85,13 @@ function universome_theme_setup()
 		* @link https://developer.wordpress.org/reference/functions/add_theme_support/ 
 		*/
 	if (function_exists('add_theme_support')) {
-		add_theme_support('post-thumbnails');
+		add_theme_support('post-thumbnail');
 
-		set_post_thumbnail_size(800, 450, true); // default Featured Image dimensions (cropped)
+		set_post_thumbnail_size(450, 450, true); // default Featured Image dimensions (cropped)
 
 		// additional image sizes
-		add_image_size('poster-thumb', 180, 300);
-		set_post_thumbnail_size(150, 250); // 50 pixels wide by 50 pixels tall, resize mode
+		add_image_size('poster-thumbail', 180, 300, true);
+		//set_post_thumbnail_size(150, 250); // 50 pixels wide by 50 pixels tall, resize mode
 	}
 
 	// This theme uses wp_nav_menu() in one location.
@@ -221,6 +221,18 @@ function universome_theme_widgets_init()
 			'name'          => esc_html__('Sidebar', 'universome-theme'),
 			'id'            => 'sidebar-1',
 			'description'   => esc_html__('Add widgets here.', 'universome-theme'),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__('Menu Sidebar', 'universome-theme'),
+			'id'            => 'sidebar-2',
+			'description'   => esc_html__('Sidebar for smartphone navigation', 'universome-theme'),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',

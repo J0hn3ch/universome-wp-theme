@@ -4,7 +4,9 @@ const colors = require('tailwindcss/colors')
 
 module.exports = {
   //presets: [ require('@universome/tailwind-base') ],
-  content: ["./template-parts/*.{php,html,js}","./*.{php,html,js}"],
+  //mode: 'jit',
+  //purge: ['./style.css'],
+  content: ["./*.{php,html,js}","./template-parts/*.{php,html,js}","./template-parts/**/*.{php,html,js}"],
   darkMode: "class",
   theme: {
     screens: {
@@ -14,12 +16,16 @@ module.exports = {
       'xl': '1280px',  // => @media (min-width: 1280px) { ... }
       '2xl': '1536px', // => @media (min-width: 1536px) { ... }
     },
+
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
       'white': '#ffffff',
+      black: colors.black,
+      grey: colors.grey,
       red: colors.red,
       blue: colors.blue,
+      cyan: colors.cyan,
       'purple': '#3f3cbb',
       'midnight': '#121063',
       'metal': '#565584',
@@ -28,7 +34,10 @@ module.exports = {
       'bubble-gum': '#ff77e9',
       'bermuda': '#78dcca',
       'grey-darker':'#596a73',
-      'teal':'#4dc0b5'
+      'teal':'#4dc0b5',
+      indigo: colors.indigo,
+      pink: colors.pink,
+      slate: colors.slate,
     },
     fontFamily: {
       'sans': ['ui-sans-serif', 'system-ui', 'Helvetica', 'Arial', 'sans-serif'],
@@ -62,18 +71,14 @@ module.exports = {
       'extra-bold': '800',
       black: '900',
     },
-    spacing: {
-      '1': '8px',
-      '2': '12px',
-      '3': '16px',
-      '4': '24px',
-      '5': '32px',
-      '6': '48px',
-    },
+    //spacing: {},
     extend: {
       aspectRatio: {
       '4/3': '4 / 3',
       },
+      margin: {
+        '1px': '1px'
+      }
     },
   },
   variants: {

@@ -12,20 +12,20 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<!-- Author Section -->
-	<section class="post-author">
-		<div class="post-author-image"> <?php echo get_avatar(get_the_author_meta('user_email'), $size = '512');  ?> </div>
-		<div class="post-author-name"> <?php the_author_meta('display_name') ?> </div> <!--  universome_theme_posted_by(); -->
-		<div class="post-author-role"> <?php the_author_meta('user_status') ?> </div>
-		<div class="post-author-bio"> <?php the_author_meta('description') ?> </div>
-		<div class="post-author-social">
-			<ul>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-			</ul>
+	<section class="box-author-wrapper p-6 bg-blue-100 rounded-md shadow-md flex items-center space-x-4">
+		<div class="shrink-0">
+			<?php echo get_avatar(get_the_author_meta('user_email'), $size = '96', $default_value = '', $alt = '', $args = array('class' => 'rounded-full'));  ?>
+		</div>
+		<div>
+			<div class="text-xl font-medium text-black inline-block"> <?php the_author_meta('display_name') ?> </div>
+			<div class="post-author-role inline">
+				<span> <?php the_author_meta('user_status') ?> </span>
+			</div>
+			<p class="text-sm text-slate-500"> <?php the_author_meta('description') ?> </p>
 		</div>
 	</section>
+
+
 	<section class="post-box">
 		<header class="entry-header">
 			<?php
@@ -46,7 +46,9 @@
 			<?php endif; ?>
 		</header><!-- .entry-header -->
 
-		<?php universome_theme_post_thumbnail(); ?>
+		<?php universome_theme_post_thumbnail();
+		//get_template_part('template-parts/components/thumbnails/thumbnail', 'single');
+		?>
 
 		<div class="entry-content">
 			<?php
