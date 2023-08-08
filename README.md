@@ -12,6 +12,20 @@ A WordPress Theme build with Underscores and TailwindCSS for UniMe students.
 
 ### 3.1 Home Page
 
+### 3.X UI Best Practices
+
+_Resource_ [UI Best Practices - Developer WordPress](https://developer.wordpress.org/themes/advanced-topics/ui-best-practices/)
+
+1. Logo image must point to homepage
+2. Give a color palette to links
+3. Associate labels with inputs
+
+### 3.Y JavaScript Best Practices
+
+_Resource_ [JavaScript Best Practices - Developer WordPress](https://developer.wordpress.org/themes/advanced-topics/javascript-best-practices/)
+
+1.
+
 ## 4. Credits
 
 Hi. I'm a starter theme called `_s`, or `underscores`, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.

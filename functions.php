@@ -98,7 +98,7 @@ function universome_theme_setup()
 	register_nav_menus(
 		array(
 			'menu-1' => esc_html__('Primary Menu', 'universome-theme'),
-			'menu-side' => esc_html('Side menu', 'universome-theme,'),
+			'menu-mobile' => esc_html('Mobile Menu', 'universome-theme,'),
 			'menu-footer-1' => esc_html('First Footer Menu', 'universome-theme,'),
 			'menu-footer-2' => esc_html('Second Footer Menu', 'universome-theme,'),
 			'menu-legal' => esc_html('Legal Menu', 'universome-theme,')
@@ -157,7 +157,12 @@ function universome_theme_setup()
 		add_shortcode('date-today', 'wpb_date_today');
 	}
 
+
 	/**
+	 * ------------------------------ 
+	 * CUSTOM LOGO
+	 * ------------------------------
+	 * 
 	 * Add support for core custom logo.
 	 *
 	 * @link https://codex.wordpress.org/Theme_Logo
@@ -175,6 +180,20 @@ function universome_theme_setup()
 	);
 }
 add_action('after_setup_theme', 'universome_theme_setup');
+
+/* @link: https://codex.wordpress.org/Theme_Logo */
+function universome_the_custom_logo($custom_wrapper = false)
+{
+	if (function_exists('the_custom_logo')) {
+		if ($custom_wrapper) {
+			$custom_logo_id = get_theme_mod('custom_logo');
+			$custom_logo_url = wp_get_attachment_image_url($custom_logo_id, 'full');
+			echo '<img src="' . esc_url($custom_logo_url) . '" alt="UniVersoMe">';
+		} else {
+			the_custom_logo();
+		}
+	}
+}
 
 /* ------------------------------ 
  *  POST TYPES SUPPORT

@@ -5,8 +5,7 @@
  * This injects Tailwind's base styles and any base styles registered by
  * plugins.
  */
-@tailwind base;
-
+@tailwind base; /* Base layer is a fundamental part of styling*/
 @layer base{
     :root {
         /* For rgb(255 115 179 / <alpha-value>) */
@@ -24,12 +23,19 @@
         font-family: Georgia, 'Times New Roman', Times, serif;
     }
     */
+    html {
+        @apply p-0;
+    }
+
     body {
+        @apply p-0;
         @apply bg-red-50;
     }
 
     /* ---- Header ----*/
-
+    .site-branding__logo-container img{
+        max-width: 350px;
+    }
     /* ---- Main ----*/
     main {
         @apply px-1;
@@ -64,12 +70,24 @@
         @apply text-blue-600 no-underline;
     }
     
+    a:link {
+        @apply text-blue-600;
+    }
+
     a:visited {
         @apply text-blue-800;
     }
 
     a:hover {
         @apply text-tahiti;
+    }
+
+    a:focus {
+        @apply text-tahiti;
+    }
+
+    a:active {
+        @apply text-red-500;
     }
     
     /* ---- Buttons ----*/
@@ -99,7 +117,20 @@
             @apply p-0;
         }
 
-        
+        header .site-navigation {
+            @apply justify-between;
+        }
+
+        .site-navigation__buttons-left {
+            @apply flex-none;
+        }
+
+        /* ---- screen(sm): Logo ---- */
+        header .site-branding__logo-container img {
+            @apply grow;
+            max-width: 200px;
+        }
+
     }
 }
 
@@ -122,12 +153,7 @@
 
 
 
-/*--------------------------------------------------------------
-# Header
---------------------------------------------------------------*/
-.site-branding__logo-container img{
-    max-width: 350px;
-}
+
 
 /*--------------------------------------------------------------
 # Navigation

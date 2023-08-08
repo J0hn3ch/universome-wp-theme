@@ -11,6 +11,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
 	<!-- Author Section -->
 	<section class="box-author-wrapper p-6 bg-blue-100 rounded-md shadow-md flex items-center space-x-4">
 		<div class="shrink-0">
@@ -49,7 +50,7 @@
 		<?php universome_theme_post_thumbnail();
 		//get_template_part('template-parts/components/thumbnails/thumbnail', 'single');
 		?>
-
+		<!-- <div class="article-table-of-contents"></div> -->
 		<div class="entry-content">
 			<?php
 			the_content(

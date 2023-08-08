@@ -1,13 +1,23 @@
 /** @type {import('tailwindcss').Config} */
 
-const colors = require('tailwindcss/colors')
+//const { orbitComponentsPreset } = require('@kiwicom/orbit-tailwind-preset');
+const colors = require('tailwindcss/colors');
 
 module.exports = {
-  //presets: [ require('@universome/tailwind-base') ],
+  /*presets: [ orbitComponentsPreset({
+    //Enable normalizing of the browser's efault styles, which is disabled by default
+    disablePreflight: false,
+  }) ],*/
   //mode: 'jit',
   //purge: ['./style.css'],
-  content: ["./*.{php,html,js}","./template-parts/*.{php,html,js}","./template-parts/**/*.{php,html,js}"],
-  darkMode: "class",
+  content: [
+    "./*.{php,html,js}",
+    "./template-parts/*.{php,html}",
+    "./template-parts/**/*.{php,html}",
+    "./js/*.js"
+  ],
+  safelist: ['text-pink-500'],
+  darkMode: false,
   theme: {
     screens: {
       'sm': '640px',   // => @media (min-width: 640px) { ... }
@@ -78,12 +88,13 @@ module.exports = {
       },
       margin: {
         '1px': '1px'
-      }
+      },
+      //typography: ({ theme }) => ({})
     },
   },
   variants: {
     extend: {
-      padding: ['hover'],
+      
     }
   },
   corePlugins: {
@@ -92,6 +103,7 @@ module.exports = {
   plugins: [
     require("nightwind"),
     require('@tailwindcss/typography'),
+    require('@tailwindcss/forms')
   ],
 }
 

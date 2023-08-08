@@ -26,12 +26,13 @@
 	<?php wp_body_open(); ?>
 
 	<!-- Page -->
-	<div id="page" class="site wrapper mt-16 px-8">
+	<div id="page" class="site-wrapper px-8">
 		<div class="theme-container container mx-auto shadow-md bg-white">
 			<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'universome-theme'); ?></a>
 
 			<!-- Header -->
-			<header id="masthead" class="site-header block mt-3 mb-2 py-4 bg-gray-50 shadow justify-between items-center border-t-4 border-purple">
+			<header id="masthead" class="site-header block mt-1 mb-2 py-4 bg-gray-50 shadow justify-between items-center border-t-4 border-purple">
+
 				<!-- Location, Date, Time, Last Update -->
 				<div class="site-date flex flex-col font-sans text-center">
 					<span id="site-date__date-content" class="bg-inherit w-full">
@@ -41,31 +42,17 @@
 					</span>
 					<span id="site-date__last-update" class="bg-red-700 w-full text-white font-medium"> Ultimo aggiornamento: 12:30 </span>
 				</div>
+
 				<!-- Navigation -->
-				<div class="site-navigation flex items-center">
+				<div class="site-navigation p-2 container flex justify-between items-center">
 
 					<!-- Side Menu -->
-					<!--<aside id="side-menu" class="widget-area bg-red-800 h-screen"> -->
-					<?php //dynamic_sidebar('sidebar-2'); 
-					?>
-					<!-- </aside> --> <!-- #side-menu -->
-					<div id="menu-dropdown" class="site-navigation__buttons-left lg:invisible">
-						<button aria-label="Menu" class="site-navigation__button border-none">
-							<div class="site-navigation__button-icon">
-								<svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M5 12H18" stroke="#000000" stroke-width="2" stroke-linecap="round" />
-									<path d="M5 17H11" stroke="#000000" stroke-width="2" stroke-linecap="round" />
-									<path d="M5 7H15" stroke="#000000" stroke-width="2" stroke-linecap="round" />
-								</svg>
-							</div>
-						</button>
-					</div>
+					<aside id="side-menu" class="widget-area w-[90%] h-screen mr-4 bg-pink-50 absolute top-0 left-0 invisible">
+						<?php dynamic_sidebar('sidebar-2'); ?>
+					</aside><!-- #side-menu -->
 					<div class="site-branding">
-						<!-- <a href="/" aria-label="UniVersoMe" class="site-branding__logo-container"> -->
-						<?php
-						if (function_exists('the_custom_logo')) {
-							the_custom_logo();
-						} ?>
+						<a href="/" aria-label="UniVersoMe" class="site-branding__logo-container">
+							<?php universome_the_custom_logo($custom_wrapper = true); ?>
 						</a>
 						<?php
 						if (is_front_page() && is_home()) :
@@ -84,22 +71,37 @@
 														?></p>
 						<?php endif; ?>
 					</div><!-- .site-branding -->
-					<nav class="main-navigation pl-6 pr-6 font-sans text-xl font-semibold">
-						<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('Primary Menu', 'universome-theme'); ?></button>
-						<?php
-						wp_nav_menu(
-							array(
-								'theme_location' => 'menu-1',
-								'menu_id'        => 'primary-menu',
-								'menu_class'	 => 'flex justify-start space-x-4'
-							)
-						);
-						?>
-					</nav><!-- #site-navigation -->
+
+					<!-- Main Menu -->
+					<div class="site-navigation__menu">
+						<nav id="main-menu" class="main-navigation sm:invisible">
+							<div id="menu-dropdown" class="site-navigation__button-right lg:invisible">
+								<button class="site-navigation__button border-none" aria-label="Menu" aria-controls="side-menu" aria-expanded="false">
+									<div class="site-navigation__button-icon">
+										<svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M5 12H18" stroke="#000000" stroke-width="2" stroke-linecap="round" />
+											<path d="M5 17H11" stroke="#000000" stroke-width="2" stroke-linecap="round" />
+											<path d="M5 7H15" stroke="#000000" stroke-width="2" stroke-linecap="round" />
+										</svg>
+									</div>
+								</button>
+							</div>
+							<!-- <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">Menu</button> -->
+							<?php
+							wp_nav_menu(
+								array(
+									'theme_location' => 'menu-1',
+									'menu_id'        => 'primary-menu',
+									'menu_class'	 => 'flex justify-start space-x-4'
+								)
+							);
+							?>
+						</nav><!-- #site-navigation -->
+					</div>
 				</div> <!-- #navigation -->
 				<?php if (!is_single()) : ?>
 					<div id="header-image-container" class="bg-blue-50 w-full h-[250px] flex items-center">
-						<?php get_template_part('template-parts/components/boxes/box', 'author') ?>
+						<?php get_template_part('./template-parts/components/headers/header', 'radio'); ?>
 						<!-- <span class="box-decoration-clone hover:box-decoration-slice bg-gradient-to-r from-indigo-600 to-pink-500 text-white px-2 text-xl font-semibold">
 							Radio<br />UniVersoMe
 						</span> -->
@@ -113,3 +115,17 @@
 					</div>
 				<?php endif; ?>
 			</header><!-- #masthead -->
+			<div id="mobile-menu-header">
+				<nav class="contaner grid">
+					<div id="social-list"></div>
+					<?php
+					wp_nav_menu(
+						array(
+							'theme_location' => 'menu-mobile',
+							'menu_id'        => 'mobile-menu-list',
+							'menu_class'	 => 'grid'
+						)
+					);
+					?>
+				</nav>
+			</div>

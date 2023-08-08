@@ -17,6 +17,8 @@
     "url": "https://github.com/Automattic/_s/issues"
   },
   "devDependencies": {
+    "@kiwicom/orbit-tailwind-preset": "^1.0.0",
+    "@tailwindcss/forms": "^0.5.4",
     "@tailwindcss/typography": "^0.5.9",
     "@wordpress/scripts": "^19.2.2",
     "autoprefixer": "^10.4.14",
