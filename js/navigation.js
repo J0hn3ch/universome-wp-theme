@@ -5,19 +5,26 @@
  * navigation support for dropdown menus.
  */
 ( function() {
-	const siteNavigation = document.getElementById( 'main-menu' );
+	//const siteNavigation = document.getElementById( 'main-menu' );
+	const siteNavigation = document.getElementById( 'mobile-menu' );
 
 	// Return early if the navigation doesn't exist.
 	if ( ! siteNavigation ) {
 		return;
 	}
+	console.log("nav #mobile-menu preso!");
+	console.log(siteNavigation);
 
-	const button = siteNavigation.getElementsByClassName( 'site-navigation__button' )[0];
+	const button = document
+		.getElementById( 'mobile-menu-dropdown' )
+		.getElementsByTagName('button')[0];
 
 	// Return early if the button doesn't exist.
 	if ( 'undefined' === typeof button ) {
 		return;
 	}
+	console.log("button .site-navigation__button preso!");
+	console.log(button);
 
 	const menu = siteNavigation.getElementsByTagName( 'ul' )[ 0 ];
 
@@ -33,15 +40,19 @@
 
 	// Toggle the .toggled class and the aria-expanded value each time the button is clicked.
 	button.addEventListener( 'click', function() {
-		siteNavigation.classList.toggle( 'toggled' );
+		let classList = document.getElementById('mobile-menu').classList;
+		classList.toggle('hidden');
+		classList.toggle('block');
 
+		siteNavigation.classList.toggle( 'toggled' );
+		
 		if ( button.getAttribute( 'aria-expanded' ) === 'true' ) {
 			button.setAttribute( 'aria-expanded', 'false' );
 		} else {
 			button.setAttribute( 'aria-expanded', 'true' );
 		}
 	} );
-
+	
 	// Remove the .toggled class and set aria-expanded to false when the user clicks outside the navigation.
 	document.addEventListener( 'click', function( event ) {
 		const isClickInside = siteNavigation.contains( event.target );

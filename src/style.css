@@ -67,27 +67,27 @@
 
     /* ---- Hyperlink ----*/
     a {
-        @apply text-blue-600 no-underline;
+        @apply text-black no-underline;
     }
     
     a:link {
-        @apply text-blue-600;
+        @apply text-black;
     }
 
     a:visited {
-        @apply text-blue-800;
+        @apply text-black;
     }
 
     a:hover {
-        @apply text-tahiti;
+        @apply text-orange-500;
     }
 
     a:focus {
-        @apply text-tahiti;
+        @apply text-orange-500;
     }
 
     a:active {
-        @apply text-red-500;
+        @apply text-orange-800;
     }
     
     /* ---- Buttons ----*/
@@ -129,6 +129,12 @@
         header .site-branding__logo-container img {
             @apply grow;
             max-width: 200px;
+        }
+
+        /* ---- screen(sm): Mobile Menu ---- */
+        #mobile-menu-list > li:hover {
+            @apply underline;
+            @apply underline-offset-4;
         }
 
     }

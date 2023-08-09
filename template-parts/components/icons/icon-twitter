@@ -1,4 +1,4 @@
-<a href="#" class="py-2 px-4 bg-grey-900 rounded-lg flex items-center space-x-3 focus:outline-black">
+<a href="#" class="py-2 px-4 bg-grey-900 rounded-lg flex items-center space-x-3 focus:outline-black focus:outline-2 focus:outline-dotted focus:outline-offset-2">
     <span class="text-grey-100 text-sm leading-6 font-semibold">Follow on Twitter</span>
     <span><svg></svg></span>
 </a>

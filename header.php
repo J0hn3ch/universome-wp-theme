@@ -74,18 +74,7 @@
 
 					<!-- Main Menu -->
 					<div class="site-navigation__menu">
-						<nav id="main-menu" class="main-navigation sm:invisible">
-							<div id="menu-dropdown" class="site-navigation__button-right lg:invisible">
-								<button class="site-navigation__button border-none" aria-label="Menu" aria-controls="side-menu" aria-expanded="false">
-									<div class="site-navigation__button-icon">
-										<svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M5 12H18" stroke="#000000" stroke-width="2" stroke-linecap="round" />
-											<path d="M5 17H11" stroke="#000000" stroke-width="2" stroke-linecap="round" />
-											<path d="M5 7H15" stroke="#000000" stroke-width="2" stroke-linecap="round" />
-										</svg>
-									</div>
-								</button>
-							</div>
+						<nav id="main-menu" class="main-navigation">
 							<!-- <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">Menu</button> -->
 							<?php
 							wp_nav_menu(
@@ -97,11 +86,22 @@
 							);
 							?>
 						</nav><!-- #site-navigation -->
+						<div id="mobile-menu-dropdown" class="site-navigation__button-right lg:invisible">
+							<button class="site-navigation__button border-none" aria-label="Mobile Menu Button" aria-controls="side-menu" aria-expanded="false">
+								<div class="site-navigation__button-icon">
+									<svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M5 12H18" stroke="#000000" stroke-width="2" stroke-linecap="round" />
+										<path d="M5 17H11" stroke="#000000" stroke-width="2" stroke-linecap="round" />
+										<path d="M5 7H15" stroke="#000000" stroke-width="2" stroke-linecap="round" />
+									</svg>
+								</div>
+							</button>
+						</div>
 					</div>
 				</div> <!-- #navigation -->
 				<?php if (!is_single()) : ?>
-					<div id="header-image-container" class="bg-blue-50 w-full h-[250px] flex items-center">
-						<?php get_template_part('./template-parts/components/headers/header', 'radio'); ?>
+					<div id="header-image-container" class="bg-blue-50 w-full h-[250px] grid place-items-center">
+						<?php get_template_part('./template-parts/components/boxes/box', 'article'); ?>
 						<!-- <span class="box-decoration-clone hover:box-decoration-slice bg-gradient-to-r from-indigo-600 to-pink-500 text-white px-2 text-xl font-semibold">
 							Radio<br />UniVersoMe
 						</span> -->
@@ -116,14 +116,16 @@
 				<?php endif; ?>
 			</header><!-- #masthead -->
 			<div id="mobile-menu-header">
-				<nav class="contaner grid">
+				<nav id="mobile-menu" class="contaner grid hidden" aria-label="Mobile Menu">
 					<div id="social-list"></div>
 					<?php
 					wp_nav_menu(
 						array(
 							'theme_location' => 'menu-mobile',
 							'menu_id'        => 'mobile-menu-list',
-							'menu_class'	 => 'grid'
+							'menu_class'	 => 'grid grid-cols-2 gap-4 text-xl font-bold text-black',
+							'container_id'	 => 'mobile-menu-wrapper',
+							'container_class'	 => 'mx-4 px-2 py-4',
 						)
 					);
 					?>

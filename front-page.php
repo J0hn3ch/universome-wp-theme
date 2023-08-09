@@ -17,7 +17,7 @@ get_header();
 ?>
 
 <main id="primary-front" class="site-main">
-
+	Pagina Principale
 	<?php
 	while (have_posts()) :
 		the_post();
