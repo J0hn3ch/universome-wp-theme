@@ -19,9 +19,9 @@ get_header();
 ?>
 <main id="primary-home" class="site-main">
 	<div class="">
-		<!-- ... -->
+		<!-- ... grid gap-4 grid-cols-3 grid-rows-none-->
 	</div>
-	<div class="grid gap-4 grid-cols-3 grid-rows-none">
+	<div class="grid gap-1 grid-cols-3 grid-rows-none">
 		<?php
 		while (have_posts()) :
 			the_post();

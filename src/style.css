@@ -42,7 +42,7 @@
     }
     
     /* ---- Footer ----*/
-    footer {
+    body > footer {
         @apply text-white;
     }
 

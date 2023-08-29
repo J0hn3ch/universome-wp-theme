@@ -86,12 +86,15 @@ function universome_theme_setup()
 		*/
 	if (function_exists('add_theme_support')) {
 		add_theme_support('post-thumbnail');
-
 		set_post_thumbnail_size(450, 450, true); // default Featured Image dimensions (cropped)
 
 		// additional image sizes
 		add_image_size('poster-thumbail', 180, 300, true);
 		//set_post_thumbnail_size(150, 250); // 50 pixels wide by 50 pixels tall, resize mode
+
+		// removing unused image size
+		remove_image_size('1536x1536');
+		remove_image_size('2048x2048');
 	}
 
 	// This theme uses wp_nav_menu() in one location.

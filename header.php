@@ -31,7 +31,7 @@
 			<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'universome-theme'); ?></a>
 
 			<!-- Header -->
-			<header id="masthead" class="site-header block mt-1 mb-2 py-4 bg-gray-50 shadow justify-between items-center border-t-4 border-purple">
+			<header id="masthead" class="site-header block mt-1 mb-2 py-4 bg-gray-50 shadow justify-between items-center border-t-4 border-yellow-500">
 
 				<!-- Location, Date, Time, Last Update -->
 				<div class="site-date flex flex-col font-sans text-center">
@@ -50,6 +50,11 @@
 					<aside id="side-menu" class="widget-area w-[90%] h-screen mr-4 bg-pink-50 absolute top-0 left-0 invisible">
 						<?php dynamic_sidebar('sidebar-2'); ?>
 					</aside><!-- #side-menu -->
+					<div class="site-login">
+						<object type="image/svg+xml" data="<?php echo get_template_directory_uri(); ?>/assets/user.svg">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/user.svg" />
+						</object>
+					</div>
 					<div class="site-branding">
 						<a href="/" aria-label="UniVersoMe" class="site-branding__logo-container">
 							<?php universome_the_custom_logo($custom_wrapper = true); ?>
@@ -100,7 +105,7 @@
 					</div>
 				</div> <!-- #navigation -->
 				<?php if (!is_single()) : ?>
-					<div id="header-image-container" class="bg-blue-50 w-full h-[250px] grid place-items-center">
+					<div id="header-image-container" class="bg-blue-50 w-full h-auto grid place-items-center">
 						<?php get_template_part('./template-parts/components/boxes/box', 'article'); ?>
 						<!-- <span class="box-decoration-clone hover:box-decoration-slice bg-gradient-to-r from-indigo-600 to-pink-500 text-white px-2 text-xl font-semibold">
 							Radio<br />UniVersoMe
