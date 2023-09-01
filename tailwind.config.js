@@ -59,7 +59,8 @@ module.exports = {
       'body': ['"Open Sans"'],
     },
     fontSize: {
-      sm: '0.8rem',
+      xs: '0.7',
+      sm: '0.875rem',
       base: '1rem',
       lg: '1.10rem',
       xl: '1.25rem',

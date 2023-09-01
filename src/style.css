@@ -46,12 +46,16 @@
         @apply text-white;
     }
 
+    footer p {
+        @apply text-white;
+    }
+
     footer a {
         @apply text-white;
     }
 
     footer a:visited {
-        @apply text-white;
+        @apply text-red-50;
     }
 
     /* ---- Heading ----*/

@@ -677,6 +677,28 @@ body > footer {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
 }
 
+.dark footer p {
+  color: rgba(0, 0, 0, var(--tw-text-opacity));
+}
+
+.dark footer p.nightwind-prevent {
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+
+.dark .nightwind-prevent-block footer p {
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+
+footer p {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.nightwind footer p {
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
 .dark footer a {
   color: rgba(0, 0, 0, var(--tw-text-opacity));
 }
@@ -700,20 +722,20 @@ footer a {
 }
 
 .dark footer a:visited {
-  color: rgba(0, 0, 0, var(--tw-text-opacity));
+  color: rgba(127, 29, 29, var(--tw-text-opacity));
 }
 
 .dark footer a:visited.nightwind-prevent {
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
+  color: rgba(254, 242, 242, var(--tw-text-opacity));
 }
 
 .dark .nightwind-prevent-block footer a:visited {
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
+  color: rgba(254, 242, 242, var(--tw-text-opacity));
 }
 
 footer a:visited {
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  color: rgb(254 242 242 / var(--tw-text-opacity));
 }
 
 .nightwind footer a:visited {
@@ -1217,6 +1239,18 @@ button:hover {
   background-color: rgba(29, 78, 216, var(--tw-bg-opacity));
 }
 
+.dark .bg-blue-900 {
+  background-color: rgba(239, 246, 255, var(--tw-bg-opacity));
+}
+
+.dark .bg-blue-900.nightwind-prevent {
+  background-color: rgba(30, 58, 138, var(--tw-bg-opacity));
+}
+
+.dark .nightwind-prevent-block .bg-blue-900 {
+  background-color: rgba(30, 58, 138, var(--tw-bg-opacity));
+}
+
 .dark .bg-yellow-400 {
   background-color: rgba(234, 179, 8, var(--tw-bg-opacity));
 }
@@ -1371,6 +1405,10 @@ button:hover {
   top: 0px;
 }
 
+.col-span-2 {
+  grid-column: span 2 / span 2;
+}
+
 .m-4 {
   margin: 1rem;
 }
@@ -1405,8 +1443,16 @@ button:hover {
   margin-bottom: auto;
 }
 
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
 .mb-2 {
   margin-bottom: 0.5rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
 }
 
 .ml-2 {
@@ -1485,10 +1531,6 @@ button:hover {
   height: 16rem;
 }
 
-.h-\[500px\] {
-  height: 500px;
-}
-
 .h-auto {
   height: auto;
 }
@@ -1545,6 +1587,10 @@ button:hover {
   max-width: 56rem;
 }
 
+.max-w-7xl {
+  max-width: 80rem;
+}
+
 .max-w-\[450px\] {
   max-width: 450px;
 }
@@ -1563,14 +1609,6 @@ button:hover {
 
 .grow {
   flex-grow: 1;
-}
-
-.basis-1\/2 {
-  flex-basis: 50%;
-}
-
-.basis-1\/4 {
-  flex-basis: 25%;
 }
 
 .resize {
@@ -1602,10 +1640,6 @@ button:hover {
 
 .grid-rows-none {
   grid-template-rows: none;
-}
-
-.flex-row {
-  flex-direction: row;
 }
 
 .flex-col {
@@ -1765,9 +1799,9 @@ button:hover {
   background-color: rgb(29 78 216 / var(--tw-bg-opacity));
 }
 
-.bg-blue-950 {
+.bg-blue-900 {
   --tw-bg-opacity: 1;
-  background-color: rgb(23 37 84 / var(--tw-bg-opacity));
+  background-color: rgb(30 58 138 / var(--tw-bg-opacity));
 }
 
 .bg-indigo-300 {
@@ -1855,6 +1889,11 @@ button:hover {
   padding-right: 1rem;
 }
 
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
@@ -1863,6 +1902,11 @@ button:hover {
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .pl-10 {
@@ -1882,11 +1926,15 @@ button:hover {
 }
 
 .text-sm {
-  font-size: 0.8rem;
+  font-size: 0.875rem;
 }
 
 .text-xl {
   font-size: 1.25rem;
+}
+
+.text-xs {
+  font-size: 0.7;
 }
 
 .font-bold {
@@ -1932,6 +1980,10 @@ button:hover {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-opacity-80 {
+  --tw-text-opacity: 0.8;
 }
 
 .placeholder-slate-400::-moz-placeholder {
@@ -7723,6 +7775,12 @@ button:hover {
 @media (min-width: 640px) {
   .sm\:flex-row {
     flex-direction: row;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 

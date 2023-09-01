@@ -12,54 +12,71 @@
 
 ?>
 <!-- Footer -->
-<footer id="colophon" class="site-footer bg-blue-950 h-[500px]">
-	<div class="site-info">
-		<a href="<?php echo esc_url(__('https://wordpress.org/', 'universome-theme')); ?>">
-			<?php
-			/* translators: %s: CMS name, i.e. WordPress. */
-			printf(esc_html__('Proudly powered by %s', 'universome-theme'), 'WordPress');
-			?>
+<footer id="colophon" class="site-footer py-6 bg-blue-900">
+	<div class="site-footer__wrapper max-w-7xl mx-auto px-6">
+
+		<a href="<?php echo esc_url(__('https://wordpress.org/', 'universome-theme')); ?>" class="" target="_self">
+			<img src="<?php echo get_template_directory_uri(); ?>/assets/uvm-medallion.png" alt="UniVersoMe Logo Medallion" width="100px" height="100px" class="mb-4">
 		</a>
-		<span class="sep"> | </span>
-		<?php
-		/* translators: 1: Theme name, 2: Theme author. */
-		printf(esc_html__('Theme: %1$s by %2$s.', 'universome-theme'), 'universome-theme', '<a href="https://gianlucarbone.it">Gianluca Carbone</a>');
-		?>
-		<div class="site-footer-menu flex flex-row">
-			<div class="basis-1/4">
+
+		<div class="site-footer__content grid gap-4 grid-cols-2 md:grid-cols-4">
+			<div class="site-footer__description mb-10 col-span-2 text-sm">
+				<p class="mb-4 text-opacity-80 font-semibold">UniVersoMe - Testata multiforme degli studenti UniMe</p>
+				<p class="mb-4 text-opacity-80">
+					UniVersoMe è la testata giornalistica dell'Università degli Studi di Messina registrata presso il Tribunale di Messina n. 11 del 2015.
+				</p>
+
+			</div>
+
+			<div>
 				<?php
-				wp_nav_menu(
-					array(
-						'theme_location' => 'menu-footer-1',
-						'menu_class'	 => ''
-					)
+				$args_menu_footer1 = array(
+					'theme_location' => 'menu-footer-1',
+					'menu_class'	 => '',
+					'container' => 'div',
+					'container_class' => '',
+					'container_aria_label' => '',
+					'before' => '*',
+					'after' => '*',
+					'link_before' => '>',
+					'link_after' => '<',
+					'depth' => '2',
+					//'items_wrap' => '',
+					'items_spacing' => 'preserve'
 				);
+				echo wp_get_nav_menu_name($args_menu_footer1['theme_location']);
+				wp_nav_menu($args_menu_footer1);
 				?>
 			</div>
-			<div class="basis-1/4">
+			<div>
 				<?php
-				wp_nav_menu(
-					array(
-						'theme_location' => 'menu-footer-2',
-						'menu_class'	 => ''
-					)
+				$args_menu_footer2 = array(
+					'theme_location' => 'menu-footer-2',
+					'menu_class'	 => ''
 				);
+				wp_nav_menu($args_menu_footer2);
 				?>
 			</div>
-			<div class="basis-1/2">03</div>
 		</div>
-		<div class="site-bottom-menu flex">
-			<div class="flex-none w-14 h-14">&copy; UniVersoMe 2015-<?php echo date("Y"); ?> Licenze: SIAE n. 6195/I/8746, SCF n. XXX/17, LEA n. RL_2020_81</div>
-			<div class="grow h-14">2</div>
-			<div class="flex-none w-14 h-14">
+		<div class="site-bottom-menu flex justify-between">
+			<div class="">
+				<span>&copy; UniVersoMe 2015-<?php echo date("Y"); ?> Licenze: SIAE n. 6195/I/8746, SCF n. XXX/17, LEA n. RL_2020_81</span>
+				<p><?php printf(esc_html__('Proudly powered by %s', 'universome-theme'), 'WordPress');	?>
+					<span class="sep"> | </span>
+					<?php
+					/* translators: 1: Theme name, 2: Theme author. */
+					printf(esc_html__('Theme: %1$s by %2$s.', 'universome-theme'), 'universome-theme', '<a href="https://gianlucarbone.it">Gianluca Carbone</a>');
+					?>
+				</p>
+			</div>
+			<div class="">
 				<?php
-				wp_nav_menu(
-					array(
-						'theme_location' => 'menu-legal',
-						'menu_id'        => 'legal-menu',
-						'menu_class'	 => 'flex justify-end space-x-4'
-					)
+				$args_menu_legal = array(
+					'theme_location' => 'menu-legal',
+					'menu_id'        => 'legal-menu',
+					'menu_class'	 => 'flex justify-end space-x-4 text-sm'
 				);
+				wp_nav_menu($args_menu_legal);
 				?>
 			</div>
 		</div>
