@@ -19,18 +19,19 @@ get_header();
 
 			get_template_part('template-parts/content', get_post_type());
 
-			the_post_navigation(
-				array(
-					'prev_text' => '<span class="nav-subtitle">' . esc_html__('Previous:', 'universome-theme') . '</span> <span class="nav-title">%title</span>',
-					'next_text' => '<span class="nav-subtitle">' . esc_html__('Next:', 'universome-theme') . '</span> <span class="nav-title">%title</span>',
-				)
-			);
+
 
 			// If comments are open or we have at least one comment, load up the comment template.
 			if (comments_open() || get_comments_number()) :
 				comments_template();
 			endif;
 
+			the_post_navigation(
+				array(
+					'prev_text' => '<p class="nav-subtitle font-medium text-blue-800 underline underline-offset-4 decoration-2 decoration-blue-500">' . esc_html__('Precedente', 'universome-theme') . '</p> <p class="nav-title font-semibold">%title</p>',
+					'next_text' => '<p class="nav-subtitle font-medium text-blue-800 underline underline-offset-4 decoration-2 decoration-blue-500">' . esc_html__('Successivo', 'universome-theme') . '</p> <p class="nav-title font-semibold">%title</p>',
+				)
+			);
 		endwhile; // End of the loop.
 		?>
 	</div>

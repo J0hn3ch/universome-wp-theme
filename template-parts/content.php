@@ -9,9 +9,10 @@
  */
 
 ?>
-
+<!-- <?php echo "Post type: " . get_post_type(get_the_ID());
+		$format = get_post_format() ?: 'standard';
+		echo ", Post format: " . $format; ?> -->
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
 	<!-- Author Section -->
 	<section class="box-author-wrapper p-6 bg-blue-100 rounded-md shadow-md flex items-center space-x-4">
 		<div class="shrink-0">

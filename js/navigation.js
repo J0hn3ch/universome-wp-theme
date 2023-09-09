@@ -12,8 +12,8 @@
 	if ( ! siteNavigation ) {
 		return;
 	}
-	console.log("nav #mobile-menu preso!");
-	console.log(siteNavigation);
+	//console.log("nav #mobile-menu preso!");
+	//console.log(siteNavigation);
 
 	const button = document
 		.getElementById( 'mobile-menu-dropdown' )
@@ -23,8 +23,8 @@
 	if ( 'undefined' === typeof button ) {
 		return;
 	}
-	console.log("button .site-navigation__button preso!");
-	console.log(button);
+	//console.log("button .site-navigation__button preso!");
+	//console.log(button);
 
 	const menu = siteNavigation.getElementsByTagName( 'ul' )[ 0 ];
 

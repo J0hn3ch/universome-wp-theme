@@ -199,7 +199,7 @@ function universome_the_custom_logo($custom_wrapper = false)
 }
 
 /* ------------------------------ 
- *  POST TYPES SUPPORT
+ *  POST FORMATS SUPPORT
  * ------------------------------
  */
 /*
@@ -280,6 +280,7 @@ function universome_theme_scripts()
 	}
 }
 add_action('wp_enqueue_scripts', 'universome_theme_scripts');
+
 
 /**
  * Implement the Custom Header feature.

@@ -1155,6 +1155,18 @@ button:hover {
   color: rgba(37, 99, 235, var(--tw-text-opacity));
 }
 
+.dark .text-blue-800 {
+  color: rgba(219, 234, 254, var(--tw-text-opacity));
+}
+
+.dark .text-blue-800.nightwind-prevent {
+  color: rgba(30, 64, 175, var(--tw-text-opacity));
+}
+
+.dark .nightwind-prevent-block .text-blue-800 {
+  color: rgba(30, 64, 175, var(--tw-text-opacity));
+}
+
 .dark .text-pink-500 {
   color: rgba(244, 114, 182, var(--tw-text-opacity));
 }
@@ -1311,6 +1323,18 @@ button:hover {
   border-color: rgba(219, 234, 254, var(--tw-border-opacity));
 }
 
+.dark .border-blue-400 {
+  border-color: rgba(59, 130, 246, var(--tw-border-opacity));
+}
+
+.dark .border-blue-400.nightwind-prevent {
+  border-color: rgba(96, 165, 250, var(--tw-border-opacity));
+}
+
+.dark .nightwind-prevent-block .border-blue-400 {
+  border-color: rgba(96, 165, 250, var(--tw-border-opacity));
+}
+
 .dark .border-blue-700 {
   border-color: rgba(191, 219, 254, var(--tw-border-opacity));
 }
@@ -1443,6 +1467,11 @@ button:hover {
   margin-bottom: auto;
 }
 
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
 .mb-10 {
   margin-bottom: 2.5rem;
 }
@@ -1543,10 +1572,6 @@ button:hover {
   width: 3rem;
 }
 
-.w-14 {
-  width: 3.5rem;
-}
-
 .w-20 {
   width: 5rem;
 }
@@ -1597,10 +1622,6 @@ button:hover {
 
 .max-w-md {
   max-width: 28rem;
-}
-
-.flex-none {
-  flex: none;
 }
 
 .shrink-0 {
@@ -1746,6 +1767,10 @@ button:hover {
   border-top-width: 4px;
 }
 
+.border-solid {
+  border-style: solid;
+}
+
 .border-none {
   border-style: none;
 }
@@ -1773,6 +1798,11 @@ button:hover {
 .border-yellow-500 {
   --tw-border-opacity: 1;
   border-color: rgb(234 179 8 / var(--tw-border-opacity));
+}
+
+.border-blue-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(96 165 250 / var(--tw-border-opacity));
 }
 
 .bg-blue-100 {
@@ -1879,6 +1909,10 @@ button:hover {
   padding: 1.5rem;
 }
 
+.p-1 {
+  padding: 0.25rem;
+}
+
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -1933,10 +1967,6 @@ button:hover {
   font-size: 1.25rem;
 }
 
-.text-xs {
-  font-size: 0.7;
-}
-
 .font-bold {
   font-weight: 700;
 }
@@ -1982,8 +2012,29 @@ button:hover {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-blue-800 {
+  --tw-text-opacity: 1;
+  color: rgb(30 64 175 / var(--tw-text-opacity));
+}
+
 .text-opacity-80 {
   --tw-text-opacity: 0.8;
+}
+
+.underline {
+  text-decoration-line: underline;
+}
+
+.decoration-blue-500 {
+  text-decoration-color: #3b82f6;
+}
+
+.decoration-2 {
+  text-decoration-thickness: 2px;
+}
+
+.underline-offset-4 {
+  text-underline-offset: 4px;
 }
 
 .placeholder-slate-400::-moz-placeholder {
