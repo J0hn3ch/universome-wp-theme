@@ -85,10 +85,12 @@ function universome_theme_setup()
 		* @link https://developer.wordpress.org/reference/functions/add_theme_support/ 
 		*/
 	if (function_exists('add_theme_support')) {
-		add_theme_support('post-thumbnail');
+		add_theme_support('post-thumbnails');
 		set_post_thumbnail_size(450, 450, true); // default Featured Image dimensions (cropped)
 
+
 		// additional image sizes
+		add_image_size('post-standard-thumbnail', 800, 450, array('center', 'center'));
 		add_image_size('poster-thumbail', 180, 300, true);
 		//set_post_thumbnail_size(150, 250); // 50 pixels wide by 50 pixels tall, resize mode
 

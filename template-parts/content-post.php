@@ -9,15 +9,15 @@
  */
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    <!-- Breadcumb -->
-    <div class="post-breadcumb__box">
+    <!-- Breadcrumb -->
+    <div class="post-breadcrumb__box">
         <?php
         if (function_exists('yoast_breadcrumb')) {
-            yoast_breadcrumb('<p id="breadcrumbs">', '</p>');
+            //yoast_breadcrumb('<p id="breadcrumbs">', '</p>');
         }
         ?>
     </div>
-    <div class="post-breadcumb__box">
+    <div class="post-breadcrumb__box my-2">
         <?php
         $args = array(
             'orderby' => 'term_id',
@@ -25,7 +25,7 @@
         );
         $post_categories = wp_get_post_categories(get_the_ID(), $args);
         ?>
-        <ul class="post-breadcumb__box-list list-none">
+        <ul class="post-breadcrumb__box-list list-none">
             <?php
             $args = array(
                 'include' => $post_categories,
@@ -35,8 +35,14 @@
                 'title_li' => ''
             );
             wp_list_categories($args);
-            //var_dump($post_categories);
             ?>
         </ul>
     </div>
+    <!-- Title -->
+    <h1 class="post__title mb-2"> <?php the_title(); ?> </h1>
+
+    <!-- Post thumbnail -->
+    <?php
+    $args = array('class' => 'w-full h-96');
+    universome_theme_post_thumbnail('post-standard-thumbnail', $args); ?>
 </article><!-- #post-<?php the_ID(); ?> -->

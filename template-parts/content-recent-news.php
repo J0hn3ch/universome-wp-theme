@@ -13,7 +13,7 @@
 	<div class="article-thumbnail mx-auto relative rounded-lg overflow-hidden">
 		<?php //universome_theme_post_thumbnail('poster-thumbail'); 
 		$thumbnail_attr = array('class' => 'object-cover h-64');
-		the_post_thumbnail($size = 'post-thumbnail', $attr = $thumbnail_attr); ?>
+		the_post_thumbnail($size = 'post-preview-thumbnail', $attr = $thumbnail_attr); ?>
 	</div>
 	<div class="article-header p-2 flex justify-between">
 		<p class="article-header__category">Attualità</p>

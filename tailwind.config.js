@@ -92,6 +92,11 @@ module.exports = {
       margin: {
         '1px': '1px'
       },
+      colors: {
+        dark: {
+          700: '#212335'
+        }
+      }
       //typography: ({ theme }) => ({})
     },
   },

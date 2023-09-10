@@ -71,15 +71,15 @@
 
     /* ---- Hyperlink ----*/
     a {
-        @apply text-black no-underline;
+        @apply text-dark-700 no-underline;
     }
     
     a:link {
-        @apply text-black;
+        @apply text-dark-700;
     }
 
     a:visited {
-        @apply text-black;
+        @apply text-dark-700;
     }
 
     a:hover {
@@ -105,27 +105,31 @@
 
     /* ==== Template-parts: Content Post ==== */
     /* ---- Breadcumb ---- */
-    .post-breadcumb__box-list li {
+    .post-breadcrumb__box-list li {
         @apply inline-block;
     }
     
-    .post-breadcumb__box-list li::before {
+    .post-breadcrumb__box-list li::before {
         @apply content-['>'];
         @apply mr-1;
     }
     
-    .post-breadcumb__box li:first-child {
+    .post-breadcrumb__box li:first-child {
         @apply font-semibold;
         @apply text-black;
         @apply underline;
         @apply decoration-orange-500;
         @apply decoration-4;
-        @apply underline-offset-8;
+        @apply underline-offset-4;
     }
 
-    .post-breadcumb__box li:first-child:before {
+    .post-breadcrumb__box li:first-child:before {
         @apply content-[''];
+        @apply mr-0;
     }
+    /* ---- Title ---- */
+    /* ---- Post thumbnail ---- */
+    
     /*--------------------------------------------------------------
     # Screen size: sm
     --------------------------------------------------------------*/
