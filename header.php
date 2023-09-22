@@ -50,25 +50,20 @@
 					<aside id="side-menu" class="widget-area w-[90%] h-screen mr-4 bg-pink-50 absolute top-0 left-0 invisible">
 						<?php dynamic_sidebar('sidebar-2'); ?>
 					</aside><!-- #side-menu -->
-					<div class="site-login">
+
+					<!-- 1: Login button -->
+					<div class="site-login bg-yellow-50 flex-none w-14 h-14">
 						<object type="image/svg+xml" data="<?php echo get_template_directory_uri(); ?>/assets/user.svg">
 							<img src="<?php echo get_template_directory_uri(); ?>/assets/user.svg" />
 						</object>
 					</div>
-					<div class="site-branding">
-						<a href="/" aria-label="UniVersoMe" class="site-branding__logo-container">
-							<?php universome_the_custom_logo($custom_wrapper = true); ?>
+
+					<!-- 2: Site brand -->
+					<div class="site-branding bg-orange-50 grow text-center">
+						<a href="<?php echo esc_url(home_url('/'));  ?>" aria-label="UniVersoMe" class="site-branding__logo-container" rel="home">
+							<?php universome_the_custom_logo(); ?>
 						</a>
 						<?php
-						if (is_front_page() && is_home()) :
-						?>
-							<h1 class="site-title mb-2"><a href="<?php echo esc_url(home_url('/'));  ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
-						<?php
-						else :
-						?>
-							<h2 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h2>
-						<?php
-						endif;
 						$universome_theme_description = get_bloginfo('description', 'display');
 						if ($universome_theme_description || is_customize_preview()) :
 						?>
@@ -77,8 +72,8 @@
 						<?php endif; ?>
 					</div><!-- .site-branding -->
 
-					<!-- Main Menu -->
-					<div class="site-navigation__menu">
+					<!-- 3: Main Menu -->
+					<div class="site-navigation__menu bg-green-50 flex-none w-14 h-14">
 						<nav id="main-menu" class="main-navigation">
 							<!-- <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">Menu</button> -->
 							<?php

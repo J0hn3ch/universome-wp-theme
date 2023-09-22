@@ -15,7 +15,17 @@ get_header();
 ?>
 
 <main id="primary-front" class="site-main">
-
+	<section>
+		<div class="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4 hover:border-2 hover:border-sky-500">
+			<div class="shrink-0">
+				<img class="h-12 w-12" src="/img/logo.svg" alt="ChitChat Logo">
+			</div>
+			<div>
+				<div class="text-xl font-medium text-black">Erasmus</div>
+				<p class="text-slate-500">News ed info su Erasmus</p>
+			</div>
+		</div>
+	</section>
 	<section class="site-main__latest-news">
 		<h2>Ultime notizie</h2>
 		<div class="site-main__post-container">

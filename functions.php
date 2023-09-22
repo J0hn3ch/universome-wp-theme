@@ -187,15 +187,20 @@ function universome_theme_setup()
 add_action('after_setup_theme', 'universome_theme_setup');
 
 /* @link: https://codex.wordpress.org/Theme_Logo */
-function universome_the_custom_logo($custom_wrapper = false)
+function universome_the_custom_logo()
 {
 	if (function_exists('the_custom_logo')) {
-		if ($custom_wrapper) {
-			$custom_logo_id = get_theme_mod('custom_logo');
-			$custom_logo_url = wp_get_attachment_image_url($custom_logo_id, 'full');
-			echo '<img src="' . esc_url($custom_logo_url) . '" alt="UniVersoMe">';
-		} else {
-			the_custom_logo();
+		$custom_logo_id = get_theme_mod('custom_logo');
+		$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+
+		if ( has_custom_logo() ) {
+			echo '<img src="' . esc_url( $logo[0] ) . '" alt="' . get_bloginfo( 'name' ) . '">';
+		}else{
+			if (is_front_page() && is_home()) {
+				echo '<h1>' . get_bloginfo('name') . '</h1>';
+			} else {
+				echo '<h2>' . get_bloginfo('name') . '</h2>';
+			}
 		}
 	}
 }

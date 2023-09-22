@@ -4,6 +4,9 @@
 
 A WordPress Theme build with Underscores and TailwindCSS for UniMe students.
 
+## 1. Getting started
+``` npm install --dev ```
+
 ## 1. Introduction
 
 ## 2. Wireframe
