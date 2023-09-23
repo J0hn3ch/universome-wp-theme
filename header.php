@@ -59,7 +59,7 @@
 					</div>
 
 					<!-- 2: Site brand -->
-					<div class="site-branding bg-orange-50 grow text-center">
+					<div class="site-branding bg-orange-50 grow flex items-center justify-center">
 						<a href="<?php echo esc_url(home_url('/'));  ?>" aria-label="UniVersoMe" class="site-branding__logo-container" rel="home">
 							<?php universome_the_custom_logo(); ?>
 						</a>
